@@ -6,7 +6,7 @@
 /*   By: khzernou <khzernou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 19:16:51 by khzernou          #+#    #+#             */
-/*   Updated: 2025/11/19 19:05:54 by khzernou         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:54:52 by khzernou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[c] >= '0' && str[c] <= '9')
 	{
-		of_val = check_overflow(result, sign, str[c] - '0');
+		of_val = ft_check_overflow(result, sign, str[c] - '0');
 		if (of_val != 0)
 			return (of_val);
 		result = result * 10 + (str[c] - '0');
